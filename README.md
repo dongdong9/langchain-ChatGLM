@@ -127,8 +127,12 @@ Q1: 本项目支持哪些文件格式？
 A1: 目前已测试支持 txt、docx、md、pdf 格式文件，更多文件格式请参考 [langchain 文档](https://python.langchain.com/en/latest/modules/indexes/document_loaders/examples/unstructured_file.html)。目前已知文档中若含有特殊字符，可能存在文件无法加载的问题。
 
 Q3: 使用过程中 Python 包`nltk`发生了`Resource punkt not found.`报错，该如何解决？
-
-A3: https://github.com/nltk/nltk_data/raw/gh-pages/packages/tokenizers/punkt.zip 中的 `packages/tokenizers` 解压，放到  `nltk_data/tokenizers` 存储路径下。
+方法①：科学上网，执行python代码 
+``` 
+import nltk
+nltk.download()
+``` 
+方法②: https://github.com/nltk/nltk_data/raw/gh-pages/packages/tokenizers/punkt.zip 中的 `packages/tokenizers` 解压，放到  `nltk_data/tokenizers` 存储路径下。
 
  `nltk_data` 存储路径可以通过 `nltk.data.path` 查询。
 
